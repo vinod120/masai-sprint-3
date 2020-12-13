@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen" type="text/css">
+    .body {
+      width: 1140px;
+      margin: 0 auto;
+    }
+    .type_writer {
+      margin: 50px 100px;
+    }
+    .screen {
+      width: 900px;
+      height: 60px;
+      border: 4px solid #000;
+      font-size: 45px;
+      padding: 2px;
+      text-align: center;
+    }
+    .keys {
+      width: 60px;
+      height: 60px;
+      margin-top: 30px;
+      background-color: #000;
+      color: #fff;
+      float: left;
+      margin-left: 25px;
+      position: relative;
+    }
+    .no_margin_left {
+      margin-left: 0;
+    }
+    .clear_left {
+      clear: left;
+    }
+    .add_more_margin_left1 {
+      margin-left: 40px;
+    }
+    .add_more_margin_left2 {
+      margin-left: 80px;
+    }
+    .add_more_margin_left3 {
+      margin-left: 120px;
+    }
+    .add_more_margin_left4 {
+      margin-left: 295px;
+    }
+    .add_more_margin_left5 {
+      margin-left: 380px;
+    }
+    .align_num_content {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+    }
+    /*sc-Special Character*/
+    .align_sc {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+    .align_charc {
+      position: absolute;
+      left: 22px;
+      top: 22px;
+    }
+    .align_com {
+      position: absolute;
+      left: 15px;
+      top: 20px;
+    }
+    .space_bar {
+      width: 315px;
+      height: 60px;
+      background-color: #000;
+    }
+    .shift_key {
+      background-color: #fff;
+      border: 2px solid #000;
+      width: 150px;
+      height: 60px;
+      color: #000;
+    }
+    .align_shift {
+      position: absolute;
+      top: 20px;
+      left: 35px;
+    }
+    .align_pass {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  </style>
+  <title>The Type Writer</title>
+</head>
+
+<body class="body">
+  <div class="type_writer">
+    <div id="Screen" class="screen">masaischool.com</div>
+    <div onclick="key_display('1')" class="keys no_margin_left"><span class="align_num_content">1</span><span class="align_sc">!</span></div>
+    <div onclick="key_display('2')" class="keys"><span class="align_num_content">2</span><span class="align_sc">@</span></div>
+    <div onclick="key_display('3')" class="keys"><span class="align_num_content">3</span><span class="align_sc">#</span></div>
+    <div onclick="key_display('4')" class="keys"><span class="align_num_content">4</span><span class="align_sc">$</span></div>
+    <div onclick="key_display('5')" class="keys"><span class="align_num_content">5</span><span class="align_sc">%</span></div>
+    <div onclick="key_display('6')" class="keys"><span class="align_num_content">6</span><span class="align_sc">^</span></div>
+    <div onclick="key_display('7')" class="keys"><span class="align_num_content">7</span><span class="align_sc">&</span></div>
+    <div onclick="key_display('8')" class="keys"><span class="align_num_content">8</span><span class="align_sc">*</span></div>
+    <div onclick="key_display('9')" class="keys"><span class="align_num_content">9</span><span class="align_sc">(</span></div>
+    <div onclick="key_display('0')" class="keys"><span class="align_num_content">0</span><span class="align_sc">)</span></div>
+    <div onclick="press_DEL()" class="keys"><span class="align_charc">DEL</span></div>
+    <div onclick="key_display('q')" class="keys clear_left add_more_margin_left1"><span class="align_charc">Q</span></div>
+    <div onclick="key_display('w')" class="keys"><span class="align_charc">W</span></div>
+    <div onclick="key_display('e')" class="keys"><span class="align_charc">E</span></div>
+    <div onclick="key_display('r')" class="keys"><span class="align_charc">R</span></div>
+    <div onclick="key_display('t')" class="keys"><span class="align_charc">T</span></div>
+    <div onclick="key_display('y')" class="keys"><span class="align_charc">Y</span></div>
+    <div onclick="key_display('u')" class="keys"><span class="align_charc">U</span></div>
+    <div onclick="key_display('i')" class="keys"><span class="align_charc">I</span></div>
+    <div onclick="key_display('o')" class="keys"><span class="align_charc">O</span></div>
+    <div onclick="key_display('p')" class="keys"><span class="align_charc">P</span></div>
+    <div onclick="key_display('a')" class="keys clear_left add_more_margin_left2"><span class="align_charc">A</span></div>
+    <div onclick="key_display('s')" class="keys"><span class="align_charc">S</span></div>
+    <div onclick="key_display('d')" class="keys"><span class="align_charc">D</span></div>
+    <div onclick="key_display('f')" class="keys"><span class="align_charc">F</span></div>
+    <div onclick="key_display('g')" class="keys"><span class="align_charc">G</span></div>
+    <div onclick="key_display('h')" class="keys"><span class="align_charc">H</span></div>
+    <div onclick="key_display('j')" class="keys"><span class="align_charc">J</span></div>
+    <div onclick="key_display('k')" class="keys"><span class="align_charc">K</span></div>
+    <div onclick="key_display('l')" class="keys"><span class="align_charc">L</span></div>
+    <div onclick="key_display('z')" class="keys clear_left add_more_margin_left3"><span class="align_charc">Z</span></div>
+    <div onclick="key_display('x')" class="keys"><span class="align_charc">X</span></div>
+    <div onclick="key_display('c')" class="keys"><span class="align_charc">C</span></div>
+    <div onclick="key_display('v')" class="keys"><span class="align_charc">V</span></div>
+    <div onclick="key_display('b')" class="keys"><span class="align_charc">B</span></div>
+    <div onclick="key_display('n')" class="keys"><span class="align_charc">N</span></div>
+    <div onclick="key_display('m')" class="keys"><span class="align_charc">M</span></div>
+    <div onclick="key_display(".com")" class="keys"><span class="align_com">.com</span></div>
+    <div onclick="key_display(' ')" class="clear_left keys space_bar add_more_margin_left4">&nbsp;</div>
+
+
+    <div onclick="press_shift()" id="shift" class="keys clear_left shift_key add_more_margin_left3"><span class="align_shift">Shift Key</span></div>
+  </div>
+  <div onclick="press_password()" id="password" class="keys shift_key add_more_margin_left2"><span class="align_pass">Password Key</span></div>
+  </div>
+  <div onclick="press_caps()" id="caps" class="keys shift_key add_more_margin_left2"><span class="align_shift">Caps Key</span></div>
+  </div>
+  <div onclick="press_clean()" id="clean" class="keys clear_left shift_key add_more_margin_left5"><span class="align_shift">Clean Key</span></div>
+  </div>
+  <div onclick="press_reverse()" id="reverse" class="keys shift_key add_more_margin_left2"><span class="align_shift">Reverse Key</span></div>
+  </div>
+
+
+  <script type="text/javascript">
+    var shift_switch = false
+    var password_switch = false
+    var clean_switch = false
+    var caps_switch = false
+    var reverse_switch = false
+    var key_in = ""
+    var give_pass=""
+    var clean=""
+    var reverse=""
+    function key_display(key) {
+      if(caps_switch){
+        if(key=='a'){
+          key='A'
+        }else if (key=='b') {
+          key="B"
+        }else if (key=='c') {
+          key="C"
+        }else if (key=='d') {
+          key="D"
+        }else if (key=='e') {
+          key="E"
+        }else if (key=='f') {
+          key="F"
+        }else if (key=='g') {
+          key="G"
+        }else if (key=='h') {
+          key="H"
+        }else if (key=='i') {
+          key="I"
+        }else if (key=='j') {
+          key="J"
+        }else if (key=='k') {
+          key="K"
+        }else if (key=='l') {
+          key="L"
+        }else if (key=='m') {
+          key="M"
+        }else if (key=='n') {
+          key="N"
+        }else if (key=='o') {
+          key="O"
+        }else if (key=='p') {
+          key="P"
+        }else if (key=='q') {
+          key="Q"
+        }else if (key=='r') {
+          key="R"
+        }else if (key=='s') {
+          key="S"
+        }else if (key=='t') {
+          key="T"
+        }else if (key=='u') {
+          key="U"
+        }else if (key=='v') {
+          key="V"
+        }else if (key=='w') {
+          key="W"
+        }else if (key=='x') {
+          key="X"
+        }else if (key=='y') {
+          key="Y"
+        }else if (key=='z') {
+          key="Z"
+        }
+      }
+      if (shift_switch) {
+        if (key == "1") {
+          key = "!"
+        } else if (key == "2") {
+          key = "@"
+        } else if (key == "3") {
+          key = "#"
+        } else if (key == "4") {
+          key = "$"
+        } else if (key == "5") {
+          key = "%"
+        } else if (key == "6") {
+          key = "^"
+        } else if (key == "7") {
+          key = ("&")
+        } else if (key == "8") {
+          key = "*"
+        } else if (key == "9") {
+          key = "("
+        } else if (key == "0") {
+          key = ")"
+        }
+      }
+      var on_screen=document.getElementById("Screen").innerHTML
+      if(on_screen=="masaischool.com"){
+        document.getElementById("Screen").innerHTML=""
+      }
+      document.getElementById("Screen").innerHTML +=key
+      console.log(document.getElementById("Screen").innerHTML.length)
+      give_pass+=key
+      if(password_switch){
+        var have=document.getElementById("Screen").innerHTML
+        var give=key
+        for (var i = 0; i <have.length-1; i++) {
+          give='*'+give
+
+        }
+        document.getElementById("Screen").innerHTML=give
+      }
+    }
+
+    function press_DEL() {
+      var screen = document.getElementById("Screen").innerHTML
+      var del =""
+      var take_to_give=""
+      for (var i = 0; i < screen.length - 1; i++) {
+        del += screen[i]
+        take_to_give+=give_pass[i]
+      }
+      give_pass=take_to_give
+      console.log(del.length);
+      console.log(del);
+      document.getElementById("Screen").innerHTML = del
+    }
+
+    function press_shift() {
+      if (shift_switch) {
+        shift_switch = false
+        document.getElementById("shift").style.borderColor = "black"
+        document.getElementById("shift").style.color = "black"
+      } else {
+        shift_switch = true
+        document.getElementById("shift").style.borderColor = "green"
+        document.getElementById("shift").style.color = "green"
+      }
+    }
+    function press_password() {
+      if (password_switch) {
+        password_switch = false
+        document.getElementById("Screen").innerHTML=give_pass
+        document.getElementById("password").style.borderColor = "black"
+        document.getElementById("password").style.color = "black"
+      } else {
+        password_switch = true
+        document.getElementById("password").style.borderColor = "green"
+        document.getElementById("password").style.color = "green"
+      }
+    }
+    function press_caps() {
+      if (caps_switch) {
+        caps_switch = false
+        document.getElementById("caps").style.borderColor = "black"
+        document.getElementById("caps").style.color = "black"
+      } else {
+        caps_switch = true
+        document.getElementById("caps").style.borderColor = "green"
+        document.getElementById("caps").style.color = "green"
+      }
+    }
+    function press_clean() {
+      var get_screen=document.getElementById("Screen").innerHTML
+      if (clean_switch) {
+        clean_switch = false
+        document.getElementById("Screen").innerHTML=clean
+        document.getElementById("clean").style.borderColor = "black"
+        document.getElementById("clean").style.color = "black"
+      } else {
+        clean_switch = true
+        clean=""
+          if(clean_switch){
+            if(get_screen=="bitch"){
+              clean=get_screen
+              document.getElementById("Screen").innerHTML="b**ch"
+            }
+            if(get_screen=="fuck"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="f**k"
+            }
+            if(get_screen=="dumbass"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="d*****s"
+            }
+            if(get_screen=="asshole"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="a****e"
+            }
+            if(get_screen=="shit"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="s**t"
+            }
+            if(get_screen=="slut"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="s**t"
+            }
+            if(get_screen=="ass"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="a*s"
+            }
+            if(get_screen=="anal"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="a**l"
+            }
+            if(get_screen=="bastard"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="b*****d"
+            }
+            if(get_screen=="bullshit"){
+              clean+=get_screen
+              document.getElementById("Screen").innerHTML="b******t"
+            }
+          }
+        document.getElementById("clean").style.borderColor = "green"
+        document.getElementById("clean").style.color = "green"
+      }
+    }
+    function press_reverse() {
+      if (reverse_switch) {
+        reverse_switch = false
+        var print=""
+        for (var i =reverse.length-1; i >=0; i--) {
+          print+=reverse[i]
+        }
+        document.getElementById("Screen").innerHTML=print
+        document.getElementById("reverse").style.borderColor = "black"
+        document.getElementById("reverse").style.color = "black"
+      } else {
+        reverse_switch = true
+        if(reverse_switch){
+          from_screen=document.getElementById("Screen").innerHTML
+          for (var i =from_screen.length-1; i >=0; i--) {
+            reverse+=from_screen[i]
+          }
+          document.getElementById("Screen").innerHTML=reverse
+        }
+        document.getElementById("reverse").style.borderColor = "green"
+        document.getElementById("reverse").style.color = "green"
+      }
+    }
+  </script>
+
+</body>
+
+</html>
